@@ -23,4 +23,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 HEADERS += \
-    recursive_routines.h
+    recursive_routines.h \
+    pointers_arithmetic.h \
+    preprocessor_directives.h \
+    operator_overloading_basic.h \
+    operator_overloading_set_2.h \
+    memory_management.h \
+    memory_management_set_2.h
