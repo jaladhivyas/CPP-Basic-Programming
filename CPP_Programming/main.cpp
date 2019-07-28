@@ -1,5 +1,6 @@
 #include <recursive_routines.h>
 #include <pointers_arithmetic.h>
+#include <preprocessor_directives.h>
 #include <operator_overloading_basic.h>
 #include <operator_overloading_set_2.h>
 #include <memory_management.h>
@@ -17,6 +18,12 @@ int main()
   {
    //std::pointers::accessArrayWithPointer();
    //std::pointers::referenceVspointers();
+  }
+
+  {
+    //std::preprocessor::lineandErrorDirective();
+     //std::pointers::accessArrayWithPointer();
+     //std::pointers::referenceVspointers();
   }
 
   {

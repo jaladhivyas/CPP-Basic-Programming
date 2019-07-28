@@ -1,7 +1,7 @@
 #ifndef RECURSIVE_ROUTINES_H
 #define RECURSIVE_ROUTINES_H
 #include <iostream>
-#include<stdio.h>
+#include <stdio.h>
 
 // There are total four types of recursion
 // 1. Direct   Recursion : Function calls the same function again

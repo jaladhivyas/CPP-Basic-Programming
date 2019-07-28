@@ -62,6 +62,23 @@ Example:
 
 */
 
+/*
+ Note:
+ int *x = new int[size]; // It throws exception bad_alloc if allocation fails.
+ using keyword nothrow it can be avoided and it returns nullptr
+ E.g.
+ x = new (nothrow) int[size];
+*/
+
+// new vs malloc
+
+// 1. new is an operator whereas malloc() is a library function.
+// 2. new allocates memory and calls constructor for object initialization.
+//    But malloc() allocates memory and does not call constructor.
+// 3. Return type of new is exact data type while malloc() returns void*.
+// 4. new is faster than malloc() because an operator is always faster than a function.
+
+
 }
 
 }

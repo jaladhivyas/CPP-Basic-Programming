@@ -234,7 +234,10 @@ DIST          = ../../../Qt5.9.0/5.9/gcc_64/mkspecs/features/spec_pre.prf \
 		../CPP_Programming/pointers_arithmetic.h \
 		../CPP_Programming/preprocessor_directives.h \
 		../CPP_Programming/operator_overloading_basic.h \
-		../CPP_Programming/operator_overloading_set_2.h ../CPP_Programming/main.cpp
+		../CPP_Programming/operator_overloading_set_2.h \
+		../CPP_Programming/memory_management.h \
+		../CPP_Programming/memory_management_set_2.h \
+		../CPP_Programming/inheritance_basic.h ../CPP_Programming/main.cpp
 QMAKE_TARGET  = CPP_Programming
 DESTDIR       = 
 TARGET        = CPP_Programming
@@ -620,7 +623,7 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../../../Qt5.9.0/5.9/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../CPP_Programming/recursive_routines.h ../CPP_Programming/pointers_arithmetic.h ../CPP_Programming/preprocessor_directives.h ../CPP_Programming/operator_overloading_basic.h ../CPP_Programming/operator_overloading_set_2.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../CPP_Programming/recursive_routines.h ../CPP_Programming/pointers_arithmetic.h ../CPP_Programming/preprocessor_directives.h ../CPP_Programming/operator_overloading_basic.h ../CPP_Programming/operator_overloading_set_2.h ../CPP_Programming/memory_management.h ../CPP_Programming/memory_management_set_2.h ../CPP_Programming/inheritance_basic.h $(DISTDIR)/
 	$(COPY_FILE) --parents ../CPP_Programming/main.cpp $(DISTDIR)/
 
 
@@ -669,7 +672,10 @@ compiler_clean: compiler_moc_predefs_clean
 
 main.o: ../CPP_Programming/main.cpp ../CPP_Programming/recursive_routines.h \
 		../CPP_Programming/pointers_arithmetic.h \
-		../CPP_Programming/operator_overloading_basic.h
+		../CPP_Programming/preprocessor_directives.h \
+		../CPP_Programming/operator_overloading_basic.h \
+		../CPP_Programming/operator_overloading_set_2.h \
+		../CPP_Programming/memory_management.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../CPP_Programming/main.cpp
 
 ####### Install

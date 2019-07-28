@@ -29,4 +29,5 @@ HEADERS += \
     operator_overloading_basic.h \
     operator_overloading_set_2.h \
     memory_management.h \
-    memory_management_set_2.h
+    memory_management_set_2.h \
+    inheritance_basic.h
