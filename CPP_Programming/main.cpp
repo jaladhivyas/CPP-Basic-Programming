@@ -1,3 +1,4 @@
+#include <inheritance_basic.h>
 #include <recursive_routines.h>
 #include <pointers_arithmetic.h>
 #include <preprocessor_directives.h>
@@ -39,6 +40,9 @@ int main()
 //    std::opt::complex c2(3,4);
 
 //    std::opt::complex c3 = c1+c2;
+    //    c4.display();
+    //    std::cout << c3;
+
 //    c3.display();
 //    c1.display();
 //    //c3 = c1 & c2;
@@ -46,9 +50,6 @@ int main()
 //    c1 += c2;
 //    c1.display();
 //    std::opt::complex c4 = (c1+=c2);
-//    c4.display();
-//    std::cout << c3;
-
 //  }
 
 //    {
@@ -57,6 +58,12 @@ int main()
 //        //std::optSet2::Testing *test = new std::optSet2::Testing[4];
 //        //delete []test;
 //        int *x = new(0) int;
+//    }
+//    {
+//      std::inheritance::Derived1 derived;
+//      std::inheritance::Base1 base;
+//      std::cout<<"Size is "<< sizeof(derived)<<std::endl;
+//      std::cout<<"Size is "<< sizeof(base)<<std::endl;
 //    }
 
    return 0;
