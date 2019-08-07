@@ -51,8 +51,10 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = ../CPP_Programming/main.cpp 
-OBJECTS       = main.o
+SOURCES       = ../CPP_Programming/main.cpp \
+		../CPP_Programming/main.cpp 
+OBJECTS       = main.o \
+		main.o
 DIST          = ../../../Qt5.9.0/5.9/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../Qt5.9.0/5.9/gcc_64/mkspecs/common/unix.conf \
 		../../../Qt5.9.0/5.9/gcc_64/mkspecs/common/linux.conf \
@@ -230,14 +232,23 @@ DIST          = ../../../Qt5.9.0/5.9/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../Qt5.9.0/5.9/gcc_64/mkspecs/features/exceptions.prf \
 		../../../Qt5.9.0/5.9/gcc_64/mkspecs/features/yacc.prf \
 		../../../Qt5.9.0/5.9/gcc_64/mkspecs/features/lex.prf \
-		../CPP_Programming/CPP_Programming.pro ../CPP_Programming/recursive_routines.h \
-		../CPP_Programming/pointers_arithmetic.h \
-		../CPP_Programming/preprocessor_directives.h \
-		../CPP_Programming/operator_overloading_basic.h \
-		../CPP_Programming/operator_overloading_set_2.h \
-		../CPP_Programming/memory_management.h \
-		../CPP_Programming/memory_management_set_2.h \
-		../CPP_Programming/inheritance_basic.h ../CPP_Programming/main.cpp
+		../CPP_Programming/CPP_Programming.pro recursive_routines.h \
+		pointers_arithmetic.h \
+		preprocessor_directives.h \
+		operator_overloading_basic.h \
+		operator_overloading_set_2.h \
+		memory_management.h \
+		memory_management_set_2.h \
+		inheritance_basic.h \
+		../CPP_Programming/Basic/inheritance_basic.h \
+		../CPP_Programming/Basic/memory_management.h \
+		../CPP_Programming/Basic/memory_management_set_2.h \
+		../CPP_Programming/Basic/operator_overloading_basic.h \
+		../CPP_Programming/Basic/operator_overloading_set_2.h \
+		../CPP_Programming/Basic/pointers_arithmetic.h \
+		../CPP_Programming/Basic/preprocessor_directives.h \
+		../CPP_Programming/Basic/recursive_routines.h ../CPP_Programming/main.cpp \
+		../CPP_Programming/main.cpp
 QMAKE_TARGET  = CPP_Programming
 DESTDIR       = 
 TARGET        = CPP_Programming
@@ -623,8 +634,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../../../Qt5.9.0/5.9/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../CPP_Programming/recursive_routines.h ../CPP_Programming/pointers_arithmetic.h ../CPP_Programming/preprocessor_directives.h ../CPP_Programming/operator_overloading_basic.h ../CPP_Programming/operator_overloading_set_2.h ../CPP_Programming/memory_management.h ../CPP_Programming/memory_management_set_2.h ../CPP_Programming/inheritance_basic.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../CPP_Programming/main.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents recursive_routines.h pointers_arithmetic.h preprocessor_directives.h operator_overloading_basic.h operator_overloading_set_2.h memory_management.h memory_management_set_2.h inheritance_basic.h ../CPP_Programming/Basic/inheritance_basic.h ../CPP_Programming/Basic/memory_management.h ../CPP_Programming/Basic/memory_management_set_2.h ../CPP_Programming/Basic/operator_overloading_basic.h ../CPP_Programming/Basic/operator_overloading_set_2.h ../CPP_Programming/Basic/pointers_arithmetic.h ../CPP_Programming/Basic/preprocessor_directives.h ../CPP_Programming/Basic/recursive_routines.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../CPP_Programming/main.cpp ../CPP_Programming/main.cpp $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -670,12 +681,10 @@ compiler_clean: compiler_moc_predefs_clean
 
 ####### Compile
 
-main.o: ../CPP_Programming/main.cpp ../CPP_Programming/recursive_routines.h \
-		../CPP_Programming/pointers_arithmetic.h \
-		../CPP_Programming/preprocessor_directives.h \
-		../CPP_Programming/operator_overloading_basic.h \
-		../CPP_Programming/operator_overloading_set_2.h \
-		../CPP_Programming/memory_management.h
+main.o: ../CPP_Programming/main.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../CPP_Programming/main.cpp
+
+main.o: ../CPP_Programming/main.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../CPP_Programming/main.cpp
 
 ####### Install

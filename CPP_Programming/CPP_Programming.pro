@@ -9,7 +9,11 @@ CONFIG -= app_bundle
 
 TEMPLATE = app
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    main.cpp \
+    Relationships/association.cpp \
+    Relationships/aggregation.cpp
+
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked deprecated (the exact warnings
@@ -22,12 +26,21 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-HEADERS += \
-    recursive_routines.h \
-    pointers_arithmetic.h \
-    preprocessor_directives.h \
-    operator_overloading_basic.h \
-    operator_overloading_set_2.h \
-    memory_management.h \
-    memory_management_set_2.h \
-    inheritance_basic.h
+HEADERS += Basic \
+    Basic/inheritance_basic.h \
+    Basic/memory_management.h \
+    Basic/memory_management_set_2.h \
+    Basic/operator_overloading_basic.h \
+    Basic/operator_overloading_set_2.h \
+    Basic/pointers_arithmetic.h \
+    Basic/preprocessor_directives.h \
+    Basic/recursive_routines.h \
+    Basic/inheritance_basic.h \
+    Basic/memory_management.h \
+    Basic/memory_management_set_2.h \
+    Basic/operator_overloading_basic.h \
+    Basic/operator_overloading_set_2.h \
+    Basic/pointers_arithmetic.h \
+    Basic/preprocessor_directives.h \
+    Basic/recursive_routines.h \
+    Relationships/temp.h
