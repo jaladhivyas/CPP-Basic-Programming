@@ -61,7 +61,7 @@ class Derived1 : public Base1
 //3. He has many workers under him : (Aggregation) :(Single owner of the object)
 //4. His salary depends on project success.  (Composition) : (Each object depends on other object)
 //5. Project success depends on manager.
-
+class Project;
 class SwipeCard;
 class Manager
 {

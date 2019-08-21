@@ -12,7 +12,9 @@ TEMPLATE = app
 SOURCES += main.cpp \
     main.cpp \
     Relationships/association.cpp \
-    Relationships/aggregation.cpp
+    Relationships/aggregation.cpp \
+    Relationships/composition.cpp \
+    Relationships/friendship.cpp
 
 
 # The following define makes your compiler emit warnings if you use
